@@ -1,12 +1,11 @@
 import React from "react";
-import { Text, View } from "react-native";
-import { Props } from "./settings.props";
-import { styles } from "./settings.styles";
+import { Text } from "react-native";
+import { Container } from "../../../containers";
 
-export const SettingsScreen = ({ ...props }: Props) => {
+export const SettingsScreen = () => {
   return (
-    <View style={styles.wrapper} {...props}>
+    <Container>
       <Text>SettingsScreen</Text>
-    </View>
+    </Container>
   );
 };

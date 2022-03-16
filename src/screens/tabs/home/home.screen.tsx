@@ -1,12 +1,11 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { Props } from "./home.props";
-import { styles } from "./home.styles";
+import { Container } from "../../../containers";
 
-export const HomeScreen = ({ ...props }: Props) => {
+export const HomeScreen = () => {
   return (
-    <View style={styles.wrapper} {...props}>
+    <Container>
       <Text>HomeScreen</Text>
-    </View>
+    </Container>
   );
 };

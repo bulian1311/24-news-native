@@ -1,12 +1,11 @@
 import React from "react";
-import { Text, View } from "react-native";
-import { Props } from "./bookmark.props";
-import { styles } from "./bookmark.styles";
+import { Text } from "react-native";
+import { Container } from "../../../containers";
 
-export const BookmarkScreen = ({ ...props }: Props) => {
+export const BookmarkScreen = () => {
   return (
-    <View style={styles.wrapper} {...props}>
+    <Container>
       <Text>BookmarkScreen</Text>
-    </View>
+    </Container>
   );
 };

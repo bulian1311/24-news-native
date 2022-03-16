@@ -1,6 +1,5 @@
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
-import { View } from "react-native";
 import { ThemeContext } from "./src/context";
 import { theme } from "./src/theme";
 import { StackNavigator } from "./src/navigation";

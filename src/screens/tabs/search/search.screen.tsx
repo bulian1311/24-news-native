@@ -1,12 +1,11 @@
 import React from "react";
-import { Text, View } from "react-native";
-import { Props } from "./search.props";
-import { styles } from "./search.styles";
+import { Text } from "react-native";
+import { Container } from "../../../containers";
 
-export const SearchScreen = ({ ...props }: Props) => {
+export const SearchScreen = () => {
   return (
-    <View style={styles.wrapper} {...props}>
+    <Container>
       <Text>SearchScreen</Text>
-    </View>
+    </Container>
   );
 };
