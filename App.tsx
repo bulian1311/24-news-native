@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
-import { ThemeContext } from "./src/context";
+import { ThemeProvider } from "styled-components/native";
 import { theme } from "./src/theme";
 import { StackNavigator } from "./src/navigation";
 
@@ -22,10 +22,10 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <ThemeContext.Provider value={theme}>
+      <ThemeProvider theme={theme}>
         <StatusBar style="auto" />
         <StackNavigator />
-      </ThemeContext.Provider>
+      </ThemeProvider>
     </NavigationContainer>
   );
 }

@@ -1,12 +1,7 @@
 import React from "react";
-import { SafeAreaView } from "react-native";
 import { Props } from "./container.props";
-import { styles } from "./container.styles";
+import { StyledContainer } from "./container.styled";
 
 export const Container = ({ children, ...props }: Props) => {
-  return (
-    <SafeAreaView style={styles.container} {...props}>
-      {children}
-    </SafeAreaView>
-  );
+  return <StyledContainer {...props}>{children}</StyledContainer>;
 };

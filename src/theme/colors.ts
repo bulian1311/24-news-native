@@ -4,6 +4,7 @@ export const colors = {
     disabled: "#909090",
     danger: "#BA1818",
     info: "#69BDFD",
+    ghost: "#EEEEEE",
   },
   text: {
     dark: "#180E19",

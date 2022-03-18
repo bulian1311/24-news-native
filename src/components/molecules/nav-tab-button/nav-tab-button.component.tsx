@@ -1,6 +1,11 @@
 import React from "react";
 import { TouchableOpacity } from "react-native";
-import { HomeIcon, SearchIcon, BookmarkIcon, SettingsIcon } from "../../icons";
+import {
+  HomeIcon,
+  SearchIcon,
+  BookmarkIcon,
+  SettingsIcon,
+} from "../../../icons";
 import { useNavigation } from "@react-navigation/native";
 import { useTheme } from "../../../hooks";
 import { Props } from "./nav-tab-button.props";

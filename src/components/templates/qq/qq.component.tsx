@@ -1,12 +1,11 @@
 import React from "react";
-import { Text, View } from "react-native";
 import { Props } from "./qq.props";
-import { styles } from "./qq.styles";
+import { StyledView, StyledText } from "./qq.styled";
 
 export const QQ = ({ ...props }: Props) => {
   return (
-    <View style={styles.wrapper} {...props}>
-      <Text>QQ</Text>
-    </View>
+    <StyledView {...props}>
+      <StyledText>QQ</StyledText>
+    </StyledView>
   );
 };
