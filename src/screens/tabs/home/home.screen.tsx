@@ -1,6 +1,12 @@
 import React from "react";
 import { Container } from "../../../containers";
-import { Spacer, Headline, NavLink, CategoryList } from "../../../components";
+import {
+  Spacer,
+  Headline,
+  NavLink,
+  CategoryList,
+  NewsList,
+} from "../../../components";
 import { LogoIcon, BellIcon } from "../../../icons";
 import { StyledHeader, StyledIconWrapper } from "./home.styled";
 
@@ -37,7 +43,20 @@ export const HomeScreen = () => {
         ]}
       />
 
-      <Spacer />
+      <Spacer size="l" />
+      <NewsList
+        news={[
+          { id: "1" },
+          { id: "2" },
+          { id: "3" },
+          { id: "4" },
+          { id: "5" },
+          { id: "6" },
+          { id: "7" },
+          { id: "8" },
+          { id: "9" },
+        ]}
+      />
     </Container>
   );
 };

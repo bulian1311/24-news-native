@@ -6,10 +6,10 @@ export const StyledView = styled.View<{ active?: boolean }>`
       ? theme.colors.ui.primary
       : theme.colors.ui.ghost};
 
-    padding: 0 15px;
-    height: 28px;
     align-items: center;
     justify-content: center;
-    border-radius: 14px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 15px;
   `}
 `;

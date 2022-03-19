@@ -9,6 +9,7 @@ export const CategoryList = ({ categories, ...props }: Props) => {
     <StyledFlatList
       horizontal
       data={categories}
+      bounces={false}
       showsHorizontalScrollIndicator={false}
       keyExtractor={(category: any) => category}
       renderItem={({ item, index }: any) => (
