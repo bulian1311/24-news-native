@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { ThemeProvider } from "styled-components/native";
 import { theme } from "./src/theme";
 import { StackNavigator } from "./src/navigation";
+import { StoreContext, defaultStore } from "./src/context";
 
 import {
   useFonts,
@@ -22,10 +23,12 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <ThemeProvider theme={theme}>
-        <StatusBar style="auto" />
-        <StackNavigator />
-      </ThemeProvider>
+      <StatusBar style="auto" />
+      <StoreContext.Provider value={defaultStore}>
+        <ThemeProvider theme={theme}>
+          <StackNavigator />
+        </ThemeProvider>
+      </StoreContext.Provider>
     </NavigationContainer>
   );
 }

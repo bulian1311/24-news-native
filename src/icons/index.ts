@@ -5,3 +5,4 @@ export * from "./search.icon";
 export * from "./bookmark.icon";
 export * from "./settings.icon";
 export * from "./bell.icon";
+export * from "./arrow-left.icon";

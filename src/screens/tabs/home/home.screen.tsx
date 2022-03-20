@@ -30,23 +30,24 @@ export const HomeScreen = () => {
       <Spacer size="xl" />
       <CategoryList
         categories={[
-          "All",
-          "World",
-          "Top",
-          "Top1",
-          "Top2",
-          "Top3",
-          "Top4",
-          "Top5",
-          "Top6",
-          "Top7",
+          "Trending",
+          "Busines",
+          "Sport",
+          "Politics",
+          "Science",
+          "Technology",
+          "Games",
         ]}
       />
 
       <Spacer size="l" />
       <NewsList
         news={[
-          { id: "1" },
+          {
+            id: "1",
+            img: "https://shotkit.com/wp-content/uploads/2020/12/kit-lens.jpg",
+            title: "",
+          },
           { id: "2" },
           { id: "3" },
           { id: "4" },

@@ -1,1 +1,2 @@
-export * from "./useTheme.hook";
+export * from "./use-theme.hook";
+export * from "./use-store.hook";
