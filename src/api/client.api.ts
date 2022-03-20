@@ -1,4 +1,5 @@
 import axios, { AxiosResponse, Method } from "axios";
+import { rapidapiKey } from "../../secret";
 
 axios.interceptors.response.use(undefined, (error) => {
   const { status } = error.response;
@@ -35,7 +36,7 @@ export const fetchTrendingNews = async (
     },
     headers: {
       "x-rapidapi-host": "contextualwebsearch-websearch-v1.p.rapidapi.com",
-      "x-rapidapi-key": "8022472449msh632d59d6b05f912p1bdfcdjsn264aed6f7a10",
+      "x-rapidapi-key": rapidapiKey,
     },
   };
 
