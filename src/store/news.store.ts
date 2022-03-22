@@ -1,4 +1,4 @@
-import { makeAutoObservable } from "mobx";
+import { makeObservable, observable, action } from "mobx";
 import { fetchSearchNews } from "../api";
 
 import { RootStore } from "./root.store";
@@ -8,16 +8,33 @@ export class NewsStore {
 
   constructor(rootStore: RootStore) {
     this.rootStore = rootStore;
-    makeAutoObservable(this);
+    makeObservable(this, {
+      news: observable,
+      loading: observable,
+      setNews: action,
+      setLoading: action,
+    });
   }
 
   news: any[] = [];
   loading: boolean = false;
 
+  setNews = (value: any[]) => {
+    this.news = value;
+  };
+
+  setLoading = (value: boolean) => {
+    this.loading = value;
+  };
+
   fetchNews = async () => {
     try {
+      this.setLoading(true);
+
       const data = await fetchSearchNews();
-      console.log(data);
+
+      this.setLoading(false);
+      this.setNews(data.value);
     } catch (err) {
       console.error(err);
     }
