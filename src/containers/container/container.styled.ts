@@ -1,12 +1,18 @@
 import { Platform } from "react-native";
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
 const os = Platform.OS;
 
-export const StyledContainer = styled.SafeAreaView`
-  ${os === "android" && "padding-top: 30px"}
-  flex: 1;
-  padding-left: ${(props) => props.theme.spacing.space[4]};
-  padding-right: ${(props) => props.theme.spacing.space[4]};
-  background-color: ${(props) => props.theme.colors.bg.primary};
+export const StyledContainer = styled.SafeAreaView<{
+  fullHeight: boolean;
+  safeArea: boolean;
+}>`
+  ${({ theme, fullHeight, safeArea }) => css`
+    ${os === "android" && safeArea && "padding-top: 30px"};
+    ${fullHeight && "flex: 1"};
+
+    padding-left: ${theme.spacing.space[4]};
+    padding-right: ${theme.spacing.space[4]};
+    background-color: ${theme.colors.bg.primary};
+  `}
 `;

@@ -10,9 +10,9 @@ export const fonts = {
     button: "14px",
     title: "16px",
     h1: "24px",
-    h2: "16px",
-    h3: "14px",
-    h4: "12px",
-    h5: "10px",
+    h2: "18px",
+    h3: "16px",
+    h4: "14px",
+    h5: "12px",
   },
 };

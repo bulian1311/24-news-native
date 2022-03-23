@@ -1,8 +1,8 @@
 import React from "react";
-import { format } from "date-fns";
 import { Image, Headline, Paragraph, Spacer, NavLink } from "../../atoms";
 import { MenuIcon } from "../../../icons";
 import { Props } from "./news-item.props";
+import { formatDate } from "../../../utils";
 import {
   StyledItemWrapper,
   StyledContentWrapper,
@@ -15,18 +15,18 @@ export const NewsItem = ({ newsItem, ...props }: Props) => {
       ? `${newsItem.title.substring(0, 60)}...`
       : newsItem.title;
 
-  const date = format(new Date(newsItem.datePublished), "yyyy/MM/dd");
+  const date = formatDate(newsItem.datePublished);
 
   return (
     <StyledItemWrapper {...props}>
-      <NavLink navigateTo="Home">
+      <NavLink navigateTo="Details" params={newsItem}>
         <Image src={newsItem.image.url} height={140} width={140} />
       </NavLink>
 
       <Spacer pos="right" />
       <StyledContentWrapper>
-        <NavLink navigateTo="Home">
-          <Headline size="h2">{title}</Headline>
+        <NavLink navigateTo="Details" params={newsItem}>
+          <Headline size="h3">{title}</Headline>
         </NavLink>
 
         <Paragraph color="disabled" weight="bold">

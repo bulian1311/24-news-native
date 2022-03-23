@@ -1,5 +1,5 @@
 import { makeObservable, observable, action } from "mobx";
-import { fetchSearchNews } from "../api";
+import { fetchSearchNews, fetchTrendingNews } from "../api";
 
 import { RootStore } from "./root.store";
 
@@ -31,7 +31,7 @@ export class NewsStore {
     try {
       this.setLoading(true);
 
-      const data = await fetchSearchNews();
+      const data = await fetchTrendingNews();
 
       this.setLoading(false);
       this.setNews(data.value);

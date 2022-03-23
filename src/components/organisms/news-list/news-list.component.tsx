@@ -3,7 +3,6 @@ import { observer } from "mobx-react-lite";
 import { useStore } from "../../../hooks";
 import { Spacer } from "../../atoms";
 import { NewsItem } from "../../molecules";
-import { Props } from "./news-list.props";
 import { StyledFlatList } from "./news-list.styled";
 
 export const NewsList = observer(() => {
