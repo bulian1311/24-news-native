@@ -3,6 +3,7 @@ import { observer } from "mobx-react-lite";
 import { useStore } from "../../../hooks";
 import { Spacer } from "../../atoms";
 import { NewsItem } from "../../molecules";
+import { NewsLoadingList } from "../news-loading-list";
 import { StyledFlatList } from "./news-list.styled";
 
 export const NewsList = observer(() => {
@@ -11,6 +12,8 @@ export const NewsList = observer(() => {
   useEffect(() => {
     newsStore.fetchNews();
   }, []);
+
+  if (newsStore.loading) return <NewsLoadingList />;
 
   return (
     <StyledFlatList

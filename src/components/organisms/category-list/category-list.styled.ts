@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
 
-export const StyledFlatList = styled.FlatList`
-  min-height: 30px;
-`;
+export const StyledWrapper = styled.View``;
+
+export const StyledFlatList = styled.FlatList``;

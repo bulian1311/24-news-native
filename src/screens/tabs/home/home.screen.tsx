@@ -1,4 +1,5 @@
 import React from "react";
+import { observer } from "mobx-react-lite";
 import { Container } from "../../../containers";
 import {
   Spacer,
@@ -41,23 +42,7 @@ export const HomeScreen = () => {
       />
 
       <Spacer size="l" />
-      <NewsList
-        news={[
-          {
-            id: "1",
-            img: "https://shotkit.com/wp-content/uploads/2020/12/kit-lens.jpg",
-            title: "",
-          },
-          { id: "2" },
-          { id: "3" },
-          { id: "4" },
-          { id: "5" },
-          { id: "6" },
-          { id: "7" },
-          { id: "8" },
-          { id: "9" },
-        ]}
-      />
+      <NewsList />
     </Container>
   );
 };
