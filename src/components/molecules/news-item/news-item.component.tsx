@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Headline, Paragraph, Spacer, NavLink } from "../../atoms";
+import { Headline, Paragraph, Spacer, NavLink, Image } from "../../atoms";
 import { MenuIcon } from "../../../icons";
 import { Props } from "./news-item.props";
 import { formatDate } from "../../../utils";
@@ -16,11 +16,12 @@ export const NewsItem = ({ newsItem, ...props }: Props) => {
       : newsItem.title;
 
   const date = formatDate(newsItem.datePublished);
+  const img = newsItem.image.url;
 
   return (
     <StyledItemWrapper {...props}>
       <NavLink navigateTo="Details" params={newsItem}>
-        <Image src={newsItem.image.url} height={140} width={140} />
+        <Image src={img} height={140} width={140} />
       </NavLink>
 
       <Spacer pos="right" />

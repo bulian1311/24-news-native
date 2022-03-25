@@ -3,7 +3,7 @@ import {
   HomeScreen,
   SearchScreen,
   BookmarkScreen,
-  SettingsScreen,
+  //SettingsScreen,
 } from "../screens";
 import { NavTabButton } from "../components";
 import { useTheme } from "../hooks";
@@ -44,13 +44,13 @@ export const TabNavigator = () => {
           tabBarButton: () => <NavTabButton navigateTo="Bookmark" />,
         }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Settings"
         component={SettingsScreen}
         options={{
           tabBarButton: () => <NavTabButton navigateTo="Settings" />,
         }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 };

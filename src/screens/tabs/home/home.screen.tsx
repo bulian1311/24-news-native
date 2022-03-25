@@ -41,7 +41,7 @@ export const HomeScreen = () => {
         ]}
       />
 
-      <Spacer size="l" />
+      <Spacer size="xl" />
       <NewsList />
     </Container>
   );
