@@ -9,7 +9,11 @@ import {
   StyledBottomWrapper,
 } from "./news-item.styled";
 
+import qq from "../../../../assets/news.png";
+
 export const NewsItem = ({ newsItem, ...props }: Props) => {
+  console.log(qq);
+
   const title: string =
     newsItem.title.length > 60
       ? `${newsItem.title.substring(0, 60)}...`
