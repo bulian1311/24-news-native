@@ -6,3 +6,4 @@ export * from "./bookmark.icon";
 export * from "./settings.icon";
 export * from "./bell.icon";
 export * from "./arrow-left.icon";
+export * from "./cancel.icon";

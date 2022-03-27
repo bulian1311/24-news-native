@@ -3,10 +3,10 @@ import Svg, { Path } from "react-native-svg";
 
 type Props = ComponentProps<typeof Svg>;
 
-export const SearchIcon = ({ width = 25, height = 26, ...props }: Props) => (
-  <Svg width={width} height={height} fill="none" stroke="#180E19" {...props}>
+export const CancelIcon = ({ ...props }: Props) => (
+  <Svg width={20} height={20} fill="none" stroke="#919191" {...props}>
     <Path
-      d="M11.667 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM21.667 21l-4.35-4.35"
+      d="M10 18.333a8.333 8.333 0 1 0 0-16.666 8.333 8.333 0 0 0 0 16.666ZM12.5 7.5l-5 5M7.5 7.5l5 5"
       strokeWidth={1.5}
       strokeLinecap="round"
       strokeLinejoin="round"
