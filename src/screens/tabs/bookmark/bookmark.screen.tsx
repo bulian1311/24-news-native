@@ -1,11 +1,14 @@
 import React from "react";
-import { Text } from "react-native";
+import { Spacer, Headline } from "../../../components";
 import { Container } from "../../../containers";
 
 export const BookmarkScreen = () => {
   return (
     <Container>
-      <Text>BookmarkScreen</Text>
+      <Spacer />
+      <Headline size="h2" weight="bold">
+        Bookmarked
+      </Headline>
     </Container>
   );
 };
