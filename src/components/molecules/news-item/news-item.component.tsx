@@ -42,7 +42,6 @@ export const NewsItem = ({ newsItem, ...props }: Props) => {
           <Paragraph color="disabled" weight="bold">
             {date}
           </Paragraph>
-
           <MenuIcon />
         </StyledBottomWrapper>
       </StyledContentWrapper>
